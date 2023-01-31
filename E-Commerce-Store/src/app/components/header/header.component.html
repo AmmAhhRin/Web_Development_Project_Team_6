@@ -1,0 +1,98 @@
+<mat-toolbar class="bg-sky-900 w-full h-10 mb-6 flex items-center justify-center ">
+  <div class=" flex flex-row mt-3 " >
+    <div class=" flex flex-row mr-20">
+      <mat-icon class="text-base mt-0" [ngStyle]="{'color':'white'}"> local_phone</mat-icon>
+      <p class="text-white text-sm pt-1 font-thin">+855 86 269 039</p>
+    </div>
+    <div class=" flex flex-row mr-20">
+      <mat-icon class="text-sm mt-0" [ngStyle]="{'color':'white'}"> place</mat-icon>      
+      <p class="text-white text-sm py-0.5 font-thin">Kampong Speu, Cambodia</p>
+    </div>
+    <div class=" flex flex-row">
+      <mat-icon class="text-sm mt-0" [ngStyle]="{'color':'white'}">timer</mat-icon>      
+      <p class="text-white text-sm py-0.5 font-thin">Open 24/7</p>
+    </div>
+  </div>
+</mat-toolbar>
+
+<mat-toolbar class=" max-w-7xl mx-auto bg-white mb-20">
+  <a routerLink="home" class="ml-16 font-bold tracking-wide text-3xl mr-20">Bookworm</a>
+  
+  <nav class="mr-80">
+    <ul class="flex flex-row">
+      <li><a href="" class="font-thin text-lg mr-8 hover:font-medium hover:underline hover:text-sky-900">Features</a></li>
+      <li><a href="" class="font-thin text-lg mr-8 hover:font-medium hover:underline hover:text-sky-900">Popular</a></li>
+      <li><a href="" class="font-thin text-lg mr-8 hover:font-medium hover:underline hover:text-sky-900">New Releases</a></li>
+      <li><a href="" class="font-thin text-lg mr-8 hover:font-medium hover:underline hover:text-sky-900">About Us</a></li>
+    </ul>
+  </nav>
+
+
+  <div>
+    <button mat-icon-button [mat-menu-trigger-for]="search">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon
+        [matBadge]="itemsQuantity"
+        [matBadgeHidden]="!itemsQuantity"
+        matBadgeColor="warn"
+      
+        >shopping_cart</mat-icon
+      >
+    </button>
+    <button mat-icon-button [mat-menu-trigger-for]="account" >
+      <mat-icon >account_circle</mat-icon>
+    </button>
+  </div>
+
+  <mat-menu #search="matMenu">
+
+    
+
+  </mat-menu>
+  
+
+
+  <mat-menu #menu="matMenu">
+    <div class="p-3 divide-y divide-solid">
+      <div class="pb-3 flex justify-between">
+        <span class="mr-16">{{ cart.items.length }} items</span>
+        <a routerLink="cart">View Cart</a>
+      </div>
+      <div *ngIf="cart.items.length" class="py-3">
+        <div
+          *ngFor="let item of cart.items"
+          class="flex justify-between font-light mb-2"
+        >
+          {{ item.name }} x {{ item.quantity }}
+          <span class="font-bold not-italic">{{ item.price | currency }}</span>
+        </div>
+      </div>
+      <div class="flex justify-between py-3 font-light">
+        Total:
+        <span class="font-bold not-italic">{{
+          getTotal(cart.items) | currency
+        }}</span>
+      </div>
+      <div class="pt-3 flex justify-between">
+        <button
+          (click)="onClearCart()"
+          class="bg-rose-600 text-white rounded-full w-9 h-9"
+        >
+          <mat-icon>remove_shopping_cart</mat-icon>
+        </button>
+        <button
+          routerLink="cart"
+          class="bg-green-600 text-white rounded-full w-9 h-9"
+        >
+          <mat-icon>shopping_cart_checkout</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-menu>
+
+  <mat-menu #account="matMenu">
+
+  </mat-menu>
+</mat-toolbar>
