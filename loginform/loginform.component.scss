@@ -1,0 +1,83 @@
+.popup {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.popup h1 {
+    padding: 2rem;
+    background-color: #31516D;
+    color: #fff;
+    text-align: start;
+}
+
+.form {
+    margin: 0 4rem;
+}
+
+.form h2 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.form h2 span a {
+    text-decoration: none;
+    color: #31516dc4;
+    font-size: 15px;
+
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 100%;
+    background-color: #31516d;
+    border: #31516D;
+    padding: 1vh 0;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+a i {
+    font-size: 1.5rem;
+    align-items: center;
+    color: #31516D;
+    margin-right: 1vw;
+    margin-bottom: 10px;
+}
+
+h4 {
+    text-align: center;
+    color: #31516dc4;
+}
+h2{
+    font-size: 1rem;
+}
+
+.signup {
+    
+    padding: 1vh 0;
+    margin: 0 4rem;
+}
+.signup h4{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+.signup .btn{
+    width: 100%;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
