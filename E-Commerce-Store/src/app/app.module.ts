@@ -30,6 +30,8 @@ import { CartService } from './services/cart.service';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreService } from './services/store.service';
 import { MatLabel } from '@angular/material/form-field';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { MatLabel } from '@angular/material/form-field';
     FiltersComponent,
     HeaderComponent,
     CartComponent,
+    FooterComponent
+    
   ],
   imports: [
     BrowserModule,
