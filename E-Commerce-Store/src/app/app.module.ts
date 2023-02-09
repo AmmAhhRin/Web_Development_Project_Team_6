@@ -31,6 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreService } from './services/store.service';
 import { MatLabel } from '@angular/material/form-field';
 import { FooterComponent } from './components/footer/footer.component';
+import { CredentialComponent } from './credential/credential.component';
+import { SaleInfoComponent } from './models/sale-info/sale-info.component';
+import { VolumeInfoComponent } from './models/volume-info/volume-info.component';
+import { ModulesComponent } from './modules/modules.component';
 
 
 @NgModule({
@@ -42,7 +46,11 @@ import { FooterComponent } from './components/footer/footer.component';
     FiltersComponent,
     HeaderComponent,
     CartComponent,
-    FooterComponent
+    FooterComponent,
+    CredentialComponent,
+    SaleInfoComponent,
+    VolumeInfoComponent,
+    ModulesComponent
     
   ],
   imports: [
